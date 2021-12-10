@@ -10,25 +10,25 @@
         <revision>1.22.2</revision>
     </properties>
 
-    <groupId>com.wavesplatform.leveldb-jna</groupId>
+    <groupId>com.tacplatform.leveldb-jna</groupId>
     <artifactId>leveldb-jna</artifactId>
     <version>${revision}</version>
 
-    <url>https://github.com/wavesplatform/leveldb-jna</url>
+    <url>https://github.com/tacplatform/leveldb-jna</url>
     <description>Java JNA (not JNI) adapter for LevelDB</description>
     <inceptionYear>2015</inceptionYear>
 
     <licenses>
         <license>
             <name>MIT</name>
-            <url>https://github.com/wavesplatform/leveldb-jna/blob/master/LICENSE</url>
+            <url>https://github.com/tacplatform/leveldb-jna/blob/master/LICENSE</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <organization>
         <name>Waves Platform</name>
-        <url>https://wavesplatform.com/</url>
+        <url>https://tacplatform.com/</url>
     </organization>
 
     <developers>
@@ -47,13 +47,13 @@
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/wavesplatform/leveldb-jna/issues</url>
+        <url>https://github.com/tacplatform/leveldb-jna/issues</url>
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/wavesplatform/leveldb-jna.git</connection>
-        <developerConnection>scm:git:git@github.com:wavesplatform/leveldb-jna.git</developerConnection>
-        <url>https://github.com/wavesplatform/leveldb-jna</url>
+        <connection>scm:git:git://github.com/tacplatform/leveldb-jna.git</connection>
+        <developerConnection>scm:git:git@github.com:tacplatform/leveldb-jna.git</developerConnection>
+        <url>https://github.com/tacplatform/leveldb-jna</url>
     </scm>
 
     <repositories>
@@ -93,7 +93,8 @@
 
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+		<version>2.6</version>
+		<!--<version>3.2.0</version>-->
                 <configuration>
                     <archive>
                         <manifestEntries>
@@ -107,16 +108,7 @@
 
             <plugin>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-jars</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
+		<version>1.6</version>
                 <configuration>
                     <!-- Prevent `gpg` from using pinentry programs -->
                     <gpgArguments>
@@ -140,7 +132,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>flatten-maven-plugin</artifactId>
-                <version>1.2.2</version>
+		<version>1.2.2</version>
                 <configuration>
                     <flattenMode>ossrh</flattenMode>
                 </configuration>
