@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.wavesplatform.leveldb-jna</groupId>
+        <groupId>com.tacplatform.leveldb-jna</groupId>
         <artifactId>leveldb-jna</artifactId>
         <version>${revision}</version>
     </parent>
@@ -63,21 +63,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>test</id>
-            <dependencies>
-                <!-- LevelDB JNA Native Binaries (dependency for tests only) -->
-
-                <dependency>
-                    <groupId>com.wavesplatform.leveldb-jna</groupId>
-                    <artifactId>leveldb-jna-native</artifactId>
-                    <version>${revision}</version>
-                    <classifier>${platform.classifier}</classifier>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
 </project>
